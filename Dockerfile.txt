@@ -1,0 +1,6 @@
+FROM openjdk:7
+MAINTEINER hemantakumarpati
+COPY . /var/lib/jenkins/workspace/java-poc/target/ MavenWebApp.war
+WORKDIR /usr/src/mavenwebapp
+RUN javac Main.java
+CMD ["java", "Main"]
